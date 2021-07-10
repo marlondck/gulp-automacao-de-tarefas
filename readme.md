@@ -4,10 +4,10 @@
 - [x] O peso das imagens
 - [x] Otimizações manuais
 - [x] O problema dos processos manuais
-- [ ] Workflow e sua automação
-- [ ] Bem-vindo ao Gulp
-- [ ] O arquivo gulpfile.js e novas tarefas
-- [ ] Criando nossa primeira tarefa
+- [x] Workflow e sua automação
+- [x] Bem-vindo ao Gulp
+- [x] O arquivo gulpfile.js e novas tarefas
+- [x] Criando nossa primeira tarefa
 
 
 ## Integridade do projeto
