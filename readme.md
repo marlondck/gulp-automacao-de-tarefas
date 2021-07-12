@@ -12,11 +12,11 @@
 
 ## Integridade do projeto
 
-- [ ] Processos destrutivos
-- [ ] Lindando com processos destrutivos
-- [ ] Automatizando a cópia de arquivos
-- [ ] Precisamos apagar antes de copiar
-- [ ] Tarefas e suas dependências
+- [x] Processos destrutivos
+- [x] Lindando com processos destrutivos
+- [x] Automatizando a cópia de arquivos
+- [x] Precisamos apagar antes de copiar
+- [x] Tarefas e suas dependências
 
 
 ## Lidando com latência e banda
