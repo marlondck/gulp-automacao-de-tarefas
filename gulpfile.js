@@ -4,10 +4,11 @@ const clean = require('gulp-clean');
 const concat = require('gulp-concat');
 const htmlreplace = require('gulp-html-replace');
 const uglify = require('gulp-uglify');
+const usemin = require('gulp-usemin');
+const cssmin = require('gulp-cssmin');
 
 gulp.task('default', ['copy'], () => {
-  // estas tasks são assincronas e não são dependentes entre si
-  gulp.start(['build-img', 'build-js', 'build-html']);
+  gulp.start(['build-img', 'usemin']);
 });
 
 gulp.task('copy', ['clean'], () => {
@@ -26,18 +27,27 @@ gulp.task('build-img', () => {
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('build-js', () => {
- gulp.src(['dist/js/jquery.js', 'dist/js/home.js', 'dist/js/produtos.js'])
-  .pipe(concat('all.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest('dist/js'))
-});
+// gulp.task('build-js', () => {
+//  gulp.src(['dist/js/jquery.js', 'dist/js/home.js', 'dist/js/produtos.js'])
+//   .pipe(concat('all.js'))
+//   .pipe(uglify())
+//   .pipe(gulp.dest('dist/js'))
+// });
 
-// html-replace utiliza atraves de comentario <!--build:js --> inserido no index.html para funcionar
-gulp.task('build-html', () => {
+// // html-replace utiliza atraves de comentario <!--build:js --> inserido no index.html para funcionar
+// gulp.task('build-html', () => {
+//   gulp.src('dist/**/*.html')
+//     .pipe(htmlreplace({
+//       js: 'js/all.js'
+//     }))
+//     .pipe(gulp.dest('dist'))
+// });
+
+gulp.task('usemin', () => {
   gulp.src('dist/**/*.html')
-    .pipe(htmlreplace({
-      js: 'js/all.js'
+    .pipe(usemin({
+      'js': [uglify],
+      'css': [cssmin]
     }))
     .pipe(gulp.dest('dist'))
 });

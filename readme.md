@@ -24,8 +24,8 @@
 - [x] O problema das múltiplas requisições
 - [x] A técnica merge (concatenação)
 - [x] Automatizando a concatenação/merge
-- [ ] O problema de grandes arquivos
-- [ ] A técnica de minificação
+- [x] O problema de grandes arquivos
+- [x] A técnica de minificação
 
 
 ## Atacando repetições invisíveis
