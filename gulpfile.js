@@ -6,6 +6,7 @@ const htmlreplace = require('gulp-html-replace');
 const uglify = require('gulp-uglify');
 const usemin = require('gulp-usemin');
 const cssmin = require('gulp-cssmin');
+const browsesync = require('browser-sync');
 
 gulp.task('default', ['copy'], () => {
   gulp.start(['build-img', 'usemin']);
@@ -52,3 +53,11 @@ gulp.task('usemin', () => {
     .pipe(gulp.dest('dist'))
 });
 
+gulp.task('server', () => {
+  browsesync.init({
+    server: {
+      baseDir: 'src'
+    },
+    watch: true
+  })
+})
