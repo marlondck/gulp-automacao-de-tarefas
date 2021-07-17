@@ -30,20 +30,20 @@
 
 ## Atacando repetições invisíveis
 
-- [ ] Repetimos e repetimos sem percerbermos
-- [ ] O módulo BrowserSync
-- [ ] Livereloading
-- [ ] Gulp watch
-- [ ] Livereloading 1 para N
+- [x] Repetimos e repetimos sem percerbermos
+- [x] O módulo BrowserSync
+- [x] Livereloading
+- [x] Gulp watch
+- [x] Livereloading 1 para N
 
 
 ## Antecipando erros do futuro
 
-- [ ] Lint e detecção de erros em JavaScript
-- [ ] Lint sob demanda
-- [ ] Onde está meu relatório de erros?
-- [ ] Um relatório ainda melhor
-- [ ] Nem o CSS escapa!
+- [x] Lint e detecção de erros em JavaScript
+- [x] Lint sob demanda
+- [x] Onde está meu relatório de erros?
+- [x] Um relatório ainda melhor
+- [x] Nem o CSS escapa!
 
 
 ## Combatendo o Prefix HELL
