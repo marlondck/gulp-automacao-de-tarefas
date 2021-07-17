@@ -3,6 +3,7 @@ const imagemin = require('gulp-imagemin');
 const clean = require('gulp-clean');
 const concat = require('gulp-concat');
 const htmlreplace = require('gulp-html-replace');
+const uglify = require('gulp-uglify');
 
 gulp.task('default', ['copy'], () => {
   // estas tasks são assincronas e não são dependentes entre si
@@ -28,6 +29,7 @@ gulp.task('build-img', () => {
 gulp.task('build-js', () => {
  gulp.src(['dist/js/jquery.js', 'dist/js/home.js', 'dist/js/produtos.js'])
   .pipe(concat('all.js'))
+  .pipe(uglify())
   .pipe(gulp.dest('dist/js'))
 });
 
