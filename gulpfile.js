@@ -1,12 +1,13 @@
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const clean = require('gulp-clean');
-const concat = require('gulp-concat');
-const htmlreplace = require('gulp-html-replace');
 const uglify = require('gulp-uglify');
 const usemin = require('gulp-usemin');
 const cssmin = require('gulp-cssmin');
 const browsesync = require('browser-sync');
+const jshint = require('gulp-jshint');
+const jshintstylish = require('jshint-stylish');
+const csslint = require('gulp-csslint');
 
 gulp.task('default', ['copy'], () => {
   gulp.start(['build-img', 'usemin']);
@@ -57,7 +58,17 @@ gulp.task('server', () => {
   browsesync.init({
     server: {
       baseDir: 'src'
-    },
-    watch: true
+    }
   })
+  gulp.watch('src/js/*.js').on('change', (event) => {
+    gulp.src(event.path)
+      .pipe(jshint())
+      .pipe(jshint.reporter(jshintstylish))
+  })
+  gulp.watch('src/css/*.css').on('change', (event) => {
+    gulp.src(event.path)
+      .pipe(csslint())
+      .pipe(csslint.reporter())
+  })
+  gulp.watch().on('change', browsesync())
 })
