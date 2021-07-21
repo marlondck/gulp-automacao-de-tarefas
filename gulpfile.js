@@ -7,6 +7,7 @@ const cssmin = require('gulp-cssmin');
 const browsesync = require('browser-sync');
 const jshint = require('gulp-jshint');
 const jshintstylish = require('jshint-stylish');
+const autoprefixer = require('gulp-autoprefixer');
 const csslint = require('gulp-csslint');
 
 gulp.task('default', ['copy'], () => {
@@ -49,7 +50,7 @@ gulp.task('usemin', () => {
   gulp.src('dist/**/*.html')
     .pipe(usemin({
       'js': [uglify],
-      'css': [cssmin]
+      'css': [autoprefixer, cssmin]
     }))
     .pipe(gulp.dest('dist'))
 });

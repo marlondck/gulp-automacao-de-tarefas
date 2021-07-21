@@ -48,11 +48,11 @@
 
 ## Combatendo o Prefix HELL
 
-- [ ] Propriedades prefixadas
-- [ ] Prefixar com repetição? Eis a questão!
-- [ ] Automatizar, prefixar e aproveitar!
-- [ ] Integrando com tarefas existentes
-- [ ] Suportando browser mais antigos
+- [x] Propriedades prefixadas
+- [x] Prefixar com repetição? Eis a questão!
+- [x] Automatizar, prefixar e aproveitar!
+- [x] Integrando com tarefas existentes
+- [x] Suportando browser mais antigos
 
 
 ## Usar pré-processador dá trabalho, será?
