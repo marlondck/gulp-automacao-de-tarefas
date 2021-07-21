@@ -57,11 +57,11 @@
 
 ## Usar pré-processador dá trabalho, será?
 
-- [ ] Código duplicado, problemas na manutenção
-- [ ] Código complicado, mais problemas ainda
-- [ ] Pré-processadores podem nos ajudar
-- [ ] Um pouquinho sobre LESS
-- [ ] Compilação manual
-- [ ] Automatizar é a solução, mais uma vez
-- [ ] Streams podem explodir!
-- [ ] Evitando a explosão
+- [x] Código duplicado, problemas na manutenção
+- [x] Código complicado, mais problemas ainda
+- [x] Pré-processadores podem nos ajudar
+- [x] Um pouquinho sobre LESS
+- [x] Compilação manual
+- [x] Automatizar é a solução, mais uma vez
+- [x] Streams podem explodir!
+- [x] Evitando a explosão
